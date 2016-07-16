@@ -1,0 +1,44 @@
+﻿@model IEnumerable<jobapptest.Models.JobDetails>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.JobName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoOfPositios)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NoOfPositios)
+        </td>
+        <td>
+           
+                <input type="button" onclick="location.href='ApplyFor'"; value="Apply" />
+                <input type="button" onclick="location.href='ViewFor'" ; value="View" />
+          
+
+        </td>
+    </tr>
+}
+
+</table>
